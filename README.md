@@ -25,14 +25,14 @@
 
 ### 运行
 1. 如果不想在本地环境留下明文历史记录, 则可以进入容器之后使用以上命令.[**推荐**]
-  > `docker run --rm -it mmiw3/mnemonic-encription`
+  > `docker run --rm -it --network none mmiw3/mnemonic-encription`
 
   > `encrypt.sh enc "x1 x2 x3 ... x12" "123"`
 
 以上命令执行完, 退出之后容器即会销毁, 需及时保存密文助记词及对称密钥
 
-2. 也可以使用一行命令完成`docker run --rm -it mmiw3/mnemonic-encription enc "x1 x2 x3 ... x12" "123"`. **注意:** 该方式会在客户端留下明文记录, 如果是公共电脑,请不要使用该方式.
+2. 也可以使用一行命令完成`docker run --rm -it --network none mmiw3/mnemonic-encription enc "x1 x2 x3 ... x12" "123"`. **注意:** 该方式会在客户端留下明文记录, 如果是公共电脑,请不要使用该方式.
 
-3. 查看帮助`docker run --rm -it mmiw3/mnemonic-encription help`
+3. 查看帮助`docker run --rm -it --network none mmiw3/mnemonic-encription help`
 
 
